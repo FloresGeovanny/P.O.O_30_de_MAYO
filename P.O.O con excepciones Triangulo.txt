@@ -1,0 +1,34 @@
+class Area: #triangulo
+    def __init__(self): #Constructor: Inicializa los atributos de la clase que se utilizaran
+        self.base = 0
+        self.altura = 0 #accede a los atributos donde estos los declara que valen 0
+        self.resultado = 0
+
+    def obtener_valor(self, prompt):
+        while True:
+            try:
+                return int(input(prompt)) # Intenta convertir la entrada a un número entero
+
+            except ValueError:
+                print("Error: Ingresa un valor numérico.")  #Aquí es donde dice "No mijo, letras no"
+
+
+    def obtener_valores(self):
+        self.base = self.obtener_valor("Ingresa el valor de la base: ")
+        self.altura = self.obtener_valor("Ingresa el valor de la altura: ")#funcion de poner o ingresar valores sobre altura y base
+
+    def calcular_area(self):
+        self.resultado = float (self.base * self.altura)/2
+
+    def mostrar_resultado(self):
+        print(f"El valor del area es {self.resultado}")
+
+def main():
+    area = Area() # Se crea un objeto de la clase Area, donde se le agregan los atributos o funciones que se le agregaron en el constructor
+    area.obtener_valores()
+    area.calcular_area()
+    area.mostrar_resultado()
+
+if __name__ == "__main__": # Evita ejecución automática si el código es importado en otro archivo como pseint 
+    main()  # Ejecuta la función principal
+    #programa orientada a objetos

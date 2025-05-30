@@ -1,0 +1,44 @@
+import tkinter as tk  #triangulo
+
+class CalculadoraArea:  
+    def __init__(self):#Constructor: Inicializa los atributos de la clase que se utilizaran
+        self.ventana = tk.Tk()
+        self.ventana.title("Sacar área")
+        self.ventana.geometry("300x200")#configuraciones sobre la ventana
+        self.crear_widgets()
+
+    def crear_widgets(self):
+        self.etiqueta_base = tk.Label(self.ventana, text="Ingresa la base:")
+        self.etiqueta_base.pack()
+
+        self.entrada_base = tk.Entry(self.ventana)
+        self.entrada_base.pack() #cuadros de entrada donde deja poner o ingresar valores sobre altura y base
+
+
+        self.etiqueta_altura = tk.Label(self.ventana, text="Ingresa la altura:")
+        self.etiqueta_altura.pack()
+
+        self.entrada_altura = tk.Entry(self.ventana)
+        self.entrada_altura.pack()
+
+        self.boton = tk.Button(self.ventana, text="Sacar área", command=self.calcular_area)
+        self.boton.pack()
+
+        self.etiqueta_resultado = tk.Label(self.ventana, text="")
+        self.etiqueta_resultado.pack()
+
+    def calcular_area(self):
+        try:
+            base = float(self.entrada_base.get())
+            altura = float(self.entrada_altura.get())
+            resultado = (base * altura) / 2
+            self.etiqueta_resultado.config(text=f"El área es {resultado}")
+        except ValueError:
+            self.etiqueta_resultado.config(text="Error: Ingresa valores numéricos")
+
+    def run(self):
+        self.ventana.mainloop()
+
+if __name__ == "__main__":
+    calculadora = CalculadoraArea() #el creador del obejto
+    calculadora.run()

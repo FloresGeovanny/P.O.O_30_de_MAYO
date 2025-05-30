@@ -1,0 +1,7 @@
+if __name__ == '__main__': #triangulo
+	print("ingresa la base de la figura")
+	base = float(input())
+	print("ingresa la altura de la figura")
+	altura = float(input())
+	resultado = float(base*altura)/2
+	print("el resultado es: ",resultado)

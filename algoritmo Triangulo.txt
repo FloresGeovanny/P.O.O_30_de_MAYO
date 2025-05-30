@@ -1,0 +1,9 @@
+Algoritmo sin_titulo #triangulo
+	Escribir "ingresa el valor de la base"
+	leer base
+	escribir"ingres el valor de la altura"
+	leer altura
+	resultado = (base*altura)/2
+	Escribir "el area es ", resultado
+FinAlgoritmo
+

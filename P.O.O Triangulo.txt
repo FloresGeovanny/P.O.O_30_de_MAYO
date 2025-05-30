@@ -1,0 +1,25 @@
+class Area:  
+    
+    def __init__(self):  #Constructor: Inicializa los atributos de la clase que se utilizaran
+        self.base = 0 
+        self.altura = 0  #accede a los atributos donde estos los declara que valen 0
+        self.resultado = 0 
+
+    def obtener_valores(self):  #funcion de poner o ingresar valores sobre altura y base
+        self.base = int(input("Ingresa la base: "))  
+        self.altura = int(input("Ingresa la altura: "))  
+
+    def calcular_area(self):  
+        self.resultado = float(self.base * self.altura) / 2  
+
+    def mostrar_area(self):  
+        print(f"El valor del área es {self.resultado}")  
+        
+def main(): 
+    area = Area()  # Se crea un objeto de la clase Area, donde se le agregan los atributos o funciones que se le agregaron en el constructor
+    area.obtener_valores()  
+    area.calcular_area()  
+    area.mostrar_area()  
+if __name__ == "__main__":  # Evita ejecución automática si el código es importado en otro archivo como pseint 
+    main()  # Ejecuta la función principal
+    #programa orientada a objetos
