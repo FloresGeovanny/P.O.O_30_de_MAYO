@@ -1,0 +1,24 @@
+class Sumador:
+    def __init__(self):
+        self.valoa = 0
+        self.valob = 0
+        self.suma = 0
+
+    def obtener_valores(self):
+        self.valoa = int(input("Ingresa el valor a: "))
+        self.valob = int(input("Ingresa el valor b: "))  
+
+    def calcular_suma(self):
+        self.suma = self.valoa + self.valob
+
+    def mostrar_resultado(self):
+        print(f"El valor de la suma es {self.suma}")
+
+def main():
+    sumador = Sumador()
+    sumador.obtener_valores()
+    sumador.calcular_suma()
+    sumador.mostrar_resultado()
+
+if __name__ == "__main__":
+    main()

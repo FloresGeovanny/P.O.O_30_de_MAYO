@@ -1,0 +1,10 @@
+def calcula_suma(valoa, valorb):
+    return valoa + valorb
+
+
+valoa = int(input("Ingresa el primer numero: "))
+valorb = int(input("Ingresa el segundo numero: "))
+
+suma = calcula_suma(valoa, valorb)
+
+print(f"El área del triángulo es: {suma}")

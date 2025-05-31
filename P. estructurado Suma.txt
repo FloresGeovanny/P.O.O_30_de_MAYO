@@ -1,0 +1,6 @@
+valoa = int(input("ingresa un valor a "))
+valob= int(input("ingresa el valor b "))
+suma=valoa+valob
+print(f"el valor de la suma es {suma}")
+
+
